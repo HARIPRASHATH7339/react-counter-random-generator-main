@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at 10% 15%, rgba(34, 211, 238, 0.18), transparent 30%),
+        radial-gradient(circle at 90% 85%, rgba(244, 114, 182, 0.18), transparent 30%),
+        linear-gradient(135deg, #070b18, #111827 50%, #0b1120);
+    color: white;
+}
+
+.app {
+    min-height: 100vh;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #a5b4fc;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.counter-card,
+.random-card {
+    width: 400px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 24px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.counter-card h2,
+.random-card h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.counter-display,
+.random-display {
+    font-size: 72px;
+    font-weight: bold;
+    margin: 30px 0;
+    letter-spacing: 2px;
+}
+
+.counter-display {
+    color: #67e8f9;
+    text-shadow: 0 0 25px rgba(34, 211, 238, 0.45);
+}
+
+.random-display {
+    color: #f9a8d4;
+    text-shadow: 0 0 25px rgba(244, 114, 182, 0.45);
+}
+
+.counter-buttons button,
+.reset-button,
+.generate-button {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.counter-buttons button {
+    background: rgba(34, 211, 238, 0.18);
+    border: 1px solid rgba(34, 211, 238, 0.3);
+}
+
+.reset-button {
+    background: rgba(168, 85, 247, 0.25);
+    border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+.generate-button {
+    background: rgba(244, 114, 182, 0.2);
+    border: 1px solid rgba(244, 114, 182, 0.35);
+}
+
+.counter-buttons button:hover,
+.reset-button:hover,
+.generate-button:hover {
+    transform: translateY(-2px);
+}
+
+.limit-message {
+    color: #fb7185;
+    font-size: 14px;
+}
+
+.random-message {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+@media (max-width: 850px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .counter-card,
+    .random-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 500px) {
+    .app {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}
